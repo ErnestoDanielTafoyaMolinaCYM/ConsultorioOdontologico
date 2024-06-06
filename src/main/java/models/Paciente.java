@@ -2,11 +2,14 @@ package models;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
-
+@Entity
 public class Paciente extends Persona {
     
-    private int id_paciente;
+//    private int id_paciente;
     private boolean tiene_os;
     private String tipo_sangre;
     private Responsable unResponsable;
@@ -15,14 +18,23 @@ public class Paciente extends Persona {
     public Paciente() {
     }
 
-    public Paciente(int id_paciente, boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+//    public Paciente(int id_paciente, boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+//        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
+//        this.id_paciente = id_paciente;
+//        this.tiene_os = tiene_os;
+//        this.tipo_sangre = tipo_sangre;
+//        this.unResponsable = unResponsable;
+//        this.turnos = turnos;
+//    }
+
+    public Paciente(boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
         super(dni, nombre, apellido, telefono, dirección, fecha_nac);
-        this.id_paciente = id_paciente;
         this.tiene_os = tiene_os;
         this.tipo_sangre = tipo_sangre;
         this.unResponsable = unResponsable;
         this.turnos = turnos;
     }
+    
 
     public Responsable getUnResponsable() {
         return unResponsable;
@@ -41,13 +53,13 @@ public class Paciente extends Persona {
     }
 
 
-    public int getId_paciente() {
-        return id_paciente;
-    }
-
-    public void setId_paciente(int id_paciente) {
-        this.id_paciente = id_paciente;
-    }
+//    public int getId_paciente() {
+//        return id_paciente;
+//    }
+//
+//    public void setId_paciente(int id_paciente) {
+//        this.id_paciente = id_paciente;
+//    }
 
     public boolean isTiene_os() {
         return tiene_os;

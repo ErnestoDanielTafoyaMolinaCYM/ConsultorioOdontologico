@@ -2,10 +2,12 @@ package models;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 
+@Entity
 public class Odontologo extends Persona{
     
-    private int id_odontologo;
+//    private int id_odontologo;
     private String especialidad;
     private List<Turno> turnos;
     private Usuario unUsuario;
@@ -14,22 +16,32 @@ public class Odontologo extends Persona{
     public Odontologo() {
     }
 
-    public Odontologo(int id_odontologo, String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+    public Odontologo(String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
         super(dni, nombre, apellido, telefono, dirección, fecha_nac);
-        this.id_odontologo = id_odontologo;
         this.especialidad = especialidad;
         this.turnos = turnos;
         this.unUsuario = unUsuario;
         this.horario = horario;
     }
+    
+    
 
-    public int getId_odontologo() {
-        return id_odontologo;
-    }
+//    public Odontologo(int id_odontologo, String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+//        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
+//        this.id_odontologo = id_odontologo;
+//        this.especialidad = especialidad;
+//        this.turnos = turnos;
+//        this.unUsuario = unUsuario;
+//        this.horario = horario;
+//    }
 
-    public void setId_odontologo(int id_odontologo) {
-        this.id_odontologo = id_odontologo;
-    }
+//    public int getId_odontologo() {
+//        return id_odontologo;
+//    }
+//
+//    public void setId_odontologo(int id_odontologo) {
+//        this.id_odontologo = id_odontologo;
+//    }
 
     public String getEspecialidad() {
         return especialidad;
