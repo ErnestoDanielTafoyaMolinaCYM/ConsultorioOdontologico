@@ -1,0 +1,37 @@
+
+# Ignorar archivos de construcción por Maven
+/target/
+
+# Ignorar archivos de configuración específicos del entorno
+/.idea/
+/*.iml
+/*.ipr
+/*.iws
+
+# Ignorar dependencias descargadas por Maven
+.m2/
+
+# Ignorar archivos de configuración específicos del entorno
+/.classpath
+/.project
+/.settings/
+
+# Ignorar archivos y directorios generados por el IDE
+/.vscode/
+.DS_Store
+*.swp
+*~
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos temporales
+tmp/
+temp/
+
+# Ignorar archivos de compilación
+*.class
+
+# Ignorar archivos de configuración de Tomcat
+/tomcat.*.xml
+/tomcat/
