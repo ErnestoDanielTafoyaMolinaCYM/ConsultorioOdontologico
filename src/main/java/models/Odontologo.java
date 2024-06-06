@@ -3,14 +3,19 @@ package models;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Odontologo extends Persona{
     
 //    private int id_odontologo;
     private String especialidad;
+    @OneToMany(mappedBy = "odonto")
     private List<Turno> turnos;
+    @OneToOne
     private Usuario unUsuario;
+    @OneToOne
     private Horario horario;
 
     public Odontologo() {

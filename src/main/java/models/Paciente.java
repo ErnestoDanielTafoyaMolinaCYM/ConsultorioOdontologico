@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Paciente extends Persona {
@@ -12,7 +14,9 @@ public class Paciente extends Persona {
 //    private int id_paciente;
     private boolean tiene_os;
     private String tipo_sangre;
+    @OneToOne
     private Responsable unResponsable;
+    @OneToMany(mappedBy = "pacient")
     private List<Turno> turnos;
     
     public Paciente() {
