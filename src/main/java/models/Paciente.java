@@ -22,23 +22,13 @@ public class Paciente extends Persona {
     public Paciente() {
     }
 
-//    public Paciente(int id_paciente, boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
-//        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
-//        this.id_paciente = id_paciente;
-//        this.tiene_os = tiene_os;
-//        this.tipo_sangre = tipo_sangre;
-//        this.unResponsable = unResponsable;
-//        this.turnos = turnos;
-//    }
-
-    public Paciente(boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
-        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
+    public Paciente(boolean tiene_os, String tipo_sangre, Responsable unResponsable, List<Turno> turnos, int id, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+        super(id, dni, nombre, apellido, telefono, dirección, fecha_nac);
         this.tiene_os = tiene_os;
         this.tipo_sangre = tipo_sangre;
         this.unResponsable = unResponsable;
         this.turnos = turnos;
-    }
-    
+    }    
 
     public Responsable getUnResponsable() {
         return unResponsable;

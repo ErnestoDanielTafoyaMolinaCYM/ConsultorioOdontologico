@@ -21,32 +21,13 @@ public class Odontologo extends Persona{
     public Odontologo() {
     }
 
-    public Odontologo(String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
-        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
+    public Odontologo(String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, int id, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
+        super(id, dni, nombre, apellido, telefono, dirección, fecha_nac);
         this.especialidad = especialidad;
         this.turnos = turnos;
         this.unUsuario = unUsuario;
         this.horario = horario;
     }
-    
-    
-
-//    public Odontologo(int id_odontologo, String especialidad, List<Turno> turnos, Usuario unUsuario, Horario horario, String dni, String nombre, String apellido, String telefono, String dirección, Date fecha_nac) {
-//        super(dni, nombre, apellido, telefono, dirección, fecha_nac);
-//        this.id_odontologo = id_odontologo;
-//        this.especialidad = especialidad;
-//        this.turnos = turnos;
-//        this.unUsuario = unUsuario;
-//        this.horario = horario;
-//    }
-
-//    public int getId_odontologo() {
-//        return id_odontologo;
-//    }
-//
-//    public void setId_odontologo(int id_odontologo) {
-//        this.id_odontologo = id_odontologo;
-//    }
 
     public String getEspecialidad() {
         return especialidad;
