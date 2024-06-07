@@ -13,3 +13,7 @@
     </div>
 </footer>
 <!-- End of Footer -->
+
+<%@include file="./scrollTopButton.jsp" %>
+
+<%@include file="./scripts.jsp" %>
